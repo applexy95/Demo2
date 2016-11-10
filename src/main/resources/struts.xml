@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="User" namespace="/" extends="struts-default">
+        <action name="login" class="action.TestAction">
+            <result name="success">/WEB-INF/test/1.html</result>
+        </action>
+        <!--ProjectAction-->
+        <!--获取全部项目信息-->
+        <action name="getProject" class="action.ProjectAction" method="getProjectByDeveloper">
+        </action>
+        <!--获取全部开发者-->
+        <action name="getDeveloper" class="action.ProjectAction" method="getAllDeveloper">
+        </action>
+        <!--增加开发者-->
+        <action name="addDeveloper" class="action.ProjectAction" method="addDeveloper">
+        </action>
+        <!--删除开发者-->
+        <action name="delDeveloper" class="action.ProjectAction" method="delDeveloper">
+        </action>
+        <!--增加项目-->
+        <action name="addProject" class="action.ProjectAction" method="addProject">
+        </action>
+        <!--删除项目-->
+        <action name="delProject" class="action.ProjectAction" method="delProject">
+        </action>
+        <!--修改项目-->
+        <action name="modifyProject" class="action.ProjectAction" method="modifyProject">
+        </action>
+        <!--ProjectAction-->
+
+        <!--UserAction-->
+        <!--添加用户-->
+        <action name="addUser" class="action.UserAction" method="addUser">
+        </action>
+        <!--验证用户-->
+        <action name="verifyUser" class="action.UserAction" method="verifyUser">
+        </action>
+        <!--显示同事-->
+        <action name="getColleague" class="action.UserAction" method="getColleague">
+        </action>
+        <!--UserAction-->
+
+        <!--RiskAction-->
+        <!--显示所有风险-->
+        <action name="getRisk" class="action.RiskAction" method="allRisk">
+        </action>
+        <!--增加风险-->
+        <action name="addRisk" class="action.RiskAction" method="addRisk">
+        </action>
+        <!--删除风险-->
+        <action name="delRisk" class="action.RiskAction" method="delRisk">
+        </action>
+        <!--修改风险-->
+        <action name="modifyRisk" class="action.RiskAction" method="modifyRisk">
+        </action>
+        <!--RiskAction-->
+
+        <!--FollowupAction-->
+        <!--增加跟踪者-->
+        <action name="addFollowup" class="action.FollowupAction" method="addFollowup">
+        </action>
+        <!--删除跟踪者-->
+        <action name="delFollowup" class="action.FollowupAction" method="delFollowup">
+        </action>
+        <!--修改跟踪记录-->
+        <action name="modifyFollowup" class="action.FollowupAction" method="modifyFollowup">
+        </action>
+        <!--显示全部跟踪者-->
+        <action name="getFollowup" class="action.FollowupAction" method="allFollowup">
+        </action>
+        <!--FollowupAction-->
+    </package>
+
+</struts>
